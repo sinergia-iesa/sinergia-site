@@ -1,4 +1,5 @@
 import { about } from '../data/site.js'
+import { withBase } from '../utils/paths'
 import './aboutUs.css'
 
 export default function AboutUs() {
@@ -17,7 +18,7 @@ export default function AboutUs() {
               key={block.heading}
             >
               <div className="about__block-image">
-                <img src={block.image} alt="" />
+                <img src={withBase(block.image)} alt="" />
               </div>
               <div className="about__block-text">
                 <h3>{block.heading}</h3>

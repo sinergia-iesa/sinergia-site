@@ -53,7 +53,7 @@ export const topics = [
           'Instalación de Python, Visual Studio Code y GitHub para arrancar el curso desde cero.',
         thumbnail:
           '/thumbnails/introduccion/preparacion-ambiente/preparacion-ambiente.png',
-        link: 'https://sinergia-iesa.github.io/preparacion-ambiente/',
+        link: 'https://sinergia-iesa.github.io/Preparacion-de-Ambiente/',
         subtopics: [
           // Ejemplo de un subtema DE ESTE subtema:
           //
