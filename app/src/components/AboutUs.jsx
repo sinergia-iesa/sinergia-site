@@ -1,5 +1,4 @@
 import { about } from '../data/site.js'
-import { withBase } from '../utils/paths'
 import './aboutUs.css'
 
 export default function AboutUs() {
@@ -11,21 +10,35 @@ export default function AboutUs() {
           <p className="about__lede">{about.intro}</p>
         </div>
 
-        <div className="about__blocks">
-          {about.blocks.map((block, i) => (
-            <div
-              className={`about__block ${i % 2 === 1 ? 'about__block--reverse' : ''}`}
-              key={block.heading}
-            >
-              <div className="about__block-image">
-                <img src={withBase(block.image)} alt="" />
+        <div className="about__section">
+          <h3>Objetivo general</h3>
+          <p>{about.objetivoGeneral}</p>
+        </div>
+
+        <div className="about__section">
+          <h3>Objetivos específicos</h3>
+          <ul className="about__list">
+            {about.objetivosEspecificos.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="about__section">
+          <h3>{about.rolesIntro}</h3>
+          <div className="about__roles">
+            {about.roles.map((role) => (
+              <div className="about__role" key={role.rol}>
+                <h4>{role.rol}</h4>
+                <p className="about__role-perfil">{role.perfil}</p>
+                <ul className="about__list">
+                  {role.responsabilidades.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
               </div>
-              <div className="about__block-text">
-                <h3>{block.heading}</h3>
-                <p>{block.text}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <dl className="about__stats">

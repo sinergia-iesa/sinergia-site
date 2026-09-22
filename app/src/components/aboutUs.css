@@ -18,50 +18,60 @@
   max-width: 60ch;
 }
 
-.about__blocks {
-  margin-top: 56px;
-  display: flex;
-  flex-direction: column;
-  gap: 56px;
+.about__section {
+  margin-top: 48px;
+  max-width: 72ch;
 }
 
-.about__block {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
+.about__section h3 {
+  font-size: 1.4rem;
+  color: var(--ink, inherit);
 }
 
-.about__block--reverse {
-  direction: rtl;
-}
-
-.about__block--reverse > * {
-  direction: ltr;
-}
-
-.about__block-image {
-  border-radius: 6px;
-  overflow: hidden;
-  background: var(--celeste-soft);
-  aspect-ratio: 4 / 3;
-}
-
-.about__block-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about__block-text h3 {
-  font-size: 1.5rem;
-  max-width: 22ch;
-}
-
-.about__block-text p {
-  margin-top: 14px;
+.about__section > p {
+  margin-top: 12px;
   color: var(--ink-soft);
-  max-width: 48ch;
+}
+
+.about__list {
+  margin-top: 14px;
+  padding-left: 1.2em;
+  list-style: disc;
+  color: var(--ink-soft);
+}
+
+.about__list li {
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.about__roles {
+  margin-top: 24px;
+  max-width: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.about__role {
+  padding: 20px;
+  border-radius: 8px;
+  background: var(--celeste-soft);
+}
+
+.about__role h4 {
+  font-size: 1.1rem;
+}
+
+.about__role-perfil {
+  margin-top: 8px;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+.about__role .about__list {
+  font-size: 0.92rem;
 }
 
 .about__stats {
@@ -84,12 +94,4 @@
   margin: 6px 0 0;
   color: var(--ink-soft);
   font-size: 0.95rem;
-}
-
-@media (max-width: 760px) {
-  .about__block,
-  .about__block--reverse {
-    grid-template-columns: 1fr;
-    direction: ltr;
-  }
 }

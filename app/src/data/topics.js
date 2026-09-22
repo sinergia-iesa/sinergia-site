@@ -44,15 +44,12 @@ export const topics = [
     title: 'Introducción',
     description:
       'Primeros pasos: cómo se organiza el material y cómo preparar el ambiente de trabajo.',
-    thumbnail: '/thumbnails/introduccion/introduccion.png',
     subtopics: [
       {
         slug: 'preparacion-ambiente',
         title: 'Configuración del entorno de Python',
         description:
           'Instalación de Python, Visual Studio Code y GitHub para arrancar el curso desde cero.',
-        thumbnail:
-          '/thumbnails/introduccion/preparacion-ambiente/preparacion-ambiente.png',
         link: 'https://sinergia-iesa.github.io/Preparacion-de-Ambiente/',
         subtopics: [
           // Ejemplo de un subtema DE ESTE subtema:
@@ -67,6 +64,14 @@ export const topics = [
           //   subtopics: [],
           // },
         ],
+      },
+      {
+        slug: 'introduccion-python',
+        title: 'Introducción a Python',
+        description:
+          'Lo básico para empezar a programar en Python desde cero: variables, tipos de datos, operadores, condicionales, ciclos y listas.',
+        link: 'https://sinergia-iesa.github.io/Introduccion-a-Python/',
+        subtopics: [],
       },
     ],
   },
