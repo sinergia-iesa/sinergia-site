@@ -1,13 +1,19 @@
 import { about } from '../data/site.js'
+import { withBase } from '../utils/paths'
 import './aboutUs.css'
 
 export default function AboutUs() {
   return (
     <section id="quienes-somos" className="about">
       <div className="wrap">
-        <div className="about__intro">
-          <h2 className="about__title">{about.title}</h2>
-          <p className="about__lede">{about.intro}</p>
+        <div className="about__intro-row">
+          <div className="about__intro">
+            <h2 className="about__title">{about.title}</h2>
+            <p className="about__lede">{about.intro}</p>
+          </div>
+          <div className="about__intro-logo">
+            <img src={withBase('logo-full.png')} alt="Sinerg[IA]²" />
+          </div>
         </div>
 
         <div className="about__section">

@@ -3,8 +3,39 @@
   padding: 96px 0 88px;
 }
 
+.about__intro-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
 .about__intro {
   max-width: 640px;
+}
+
+.about__intro-logo {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.about__intro-logo img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .about__intro-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .about__intro-logo {
+    align-self: center;
+  }
 }
 
 .about__title {
