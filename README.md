@@ -75,13 +75,12 @@ llenarlo.
 
 Se edita solo `app/src/data/research.js` (trae la plantilla comentada):
 
-1. Si el campo no existe (Medicina, Agronomía…), agrégalo al arreglo `fields`
+1. Si el campo no existe (Medicina, Agronomía…), se agrega al arreglo `fields`
    con un `slug` y un `label`. El orden ahí es el orden de los filtros.
-2. Agrega un objeto a `research` con `title`, `summary`, `fields` (uno o
+2. Se agrega un objeto a `research` con `title`, `summary`, `fields` (uno o
    varios slugs), y opcionalmente `authors`, `year`, `status`, `link` y
    `thumbnail`.
 3. (opcional) Miniatura en `app/public/thumbnails/investigaciones/<slug>.png`.
-4. Haz commit y push a `main`.
 
 Una investigación puede pertenecer a varios campos. Las de ejemplo llevan
-`[Ejemplo]` en el título: bórralas cuando agregues las reales.
+`[Ejemplo]` en el título.
