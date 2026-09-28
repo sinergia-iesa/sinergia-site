@@ -8,7 +8,7 @@
 }
 
 .navbar__inner {
-  height: 72px;
+  height: var(--navbar-height);
   display: flex;
   align-items: center;
   justify-content: space-between;

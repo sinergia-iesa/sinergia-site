@@ -13,8 +13,8 @@ export default function Hero() {
         <p className="hero__tagline">{site.tagline}</p>
         <p className="hero__subtitle">{site.heroSubtitle}</p>
 
-        <a href="#presentaciones" className="hero__cta">
-          Ver presentaciones
+        <a href="#guias-iniciales" className="hero__cta">
+          Ver guías iniciales
         </a>
       </div>
 

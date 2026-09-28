@@ -13,6 +13,10 @@
   --font-body: 'Inter', sans-serif;
 
   --content-width: 1180px;
+  --navbar-height: 72px;
+  /* Cada sección ocupa al menos el alto visible de la página (sin el navbar) */
+  --section-min-height: calc(100vh - var(--navbar-height));
+  --section-min-height: calc(100svh - var(--navbar-height));
 }
 
 * {
@@ -21,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
 }
 
 body {

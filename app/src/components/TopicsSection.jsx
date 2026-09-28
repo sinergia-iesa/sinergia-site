@@ -43,16 +43,16 @@ export default function TopicsSection() {
   const results = useMemo(() => filterTopics(topics, trimmed), [trimmed])
 
   return (
-    <section id="presentaciones" className="topics">
+    <section id="guias-iniciales" className="topics">
       <div className="wrap">
         <div className="topics__head">
           <div>
-            <h2>Temas y presentaciones</h2>
-            <p>Explora el material del curso organizado por tema y subtema.</p>
+            <h2>Guías iniciales</h2>
+            <p>Explora el material de las guías organizado por tema y subtema.</p>
           </div>
 
           <label className="topics__search">
-            <span className="sr-only">Buscar tema o presentación</span>
+            <span className="sr-only">Buscar tema o guía</span>
             <input
               type="search"
               placeholder="Buscar por título o tema…"
@@ -70,7 +70,7 @@ export default function TopicsSection() {
           </ul>
         ) : (
           <p className="topics__empty">
-            No hay temas ni presentaciones que coincidan con “{query}”.
+            No hay temas ni guías que coincidan con “{query}”.
           </p>
         )}
       </div>

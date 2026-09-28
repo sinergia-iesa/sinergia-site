@@ -51,7 +51,7 @@ export default function TopicNode({ node, level, searchActive }) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Ver presentación ↗
+            Ver guía ↗
           </a>
         )}
       </div>

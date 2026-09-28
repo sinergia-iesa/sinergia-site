@@ -1,44 +1,60 @@
 .about {
+  --about-gap: clamp(64px, 11vh, 120px);
   background: var(--white);
-  padding: 96px 0 88px;
+  min-height: var(--section-min-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 96px 0;
 }
 
-.about__intro-row {
+/* Cada bloque (intro, objetivos, roles, cifras) queda claramente separado */
+.about .wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--about-gap);
+}
+
+.about__top {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 64px;
+  align-items: center;
+}
+
+.about__identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__identity-card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 48px;
-}
-
-.about__intro {
-  max-width: 640px;
-}
-
-.about__intro-logo {
-  flex: 0 0 auto;
-  display: flex;
   justify-content: center;
+  padding: 32px;
+  border-radius: 16px;
+  background: var(--celeste-soft);
 }
 
-.about__intro-logo img {
-  width: 200px;
-  max-width: 100%;
+.about__identity-card img {
+  width: 100%;
+  max-width: 340px;
   height: auto;
 }
 
-@media (max-width: 760px) {
-  .about__intro-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-  }
-
-  .about__intro-logo {
-    align-self: center;
-  }
+.about__eyebrow {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--celeste);
 }
 
 .about__title {
+  margin-top: 8px;
   font-size: clamp(2rem, 4vw, 2.6rem);
 }
 
@@ -49,8 +65,20 @@
   max-width: 60ch;
 }
 
+@media (max-width: 760px) {
+  .about__top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about__identity-card img {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+}
+
 .about__section {
-  margin-top: 48px;
+  margin-top: 0;
   max-width: 72ch;
 }
 
@@ -62,6 +90,38 @@
 .about__section > p {
   margin-top: 12px;
   color: var(--ink-soft);
+}
+
+.about__goals {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about__goals .about__section {
+  margin-top: 0;
+  max-width: none;
+}
+
+.about__section--especificos {
+  padding-left: 32px;
+  border-left: 2px solid var(--celeste-soft);
+}
+
+@media (max-width: 760px) {
+  .about__section--especificos {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .about__goals {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
 }
 
 .about__list {
@@ -77,37 +137,51 @@
 }
 
 .about__roles {
-  margin-top: 24px;
-  max-width: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  margin-top: 8px;
+  max-width: 72ch;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__role {
-  padding: 20px;
-  border-radius: 8px;
-  background: var(--celeste-soft);
+  padding-top: 28px;
+  margin-top: 28px;
+  border-top: 1px solid var(--celeste-soft);
+}
+
+.about__role:first-child {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
 }
 
 .about__role h4 {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  color: var(--azul-talamanca);
 }
 
 .about__role-perfil {
-  margin-top: 8px;
+  margin-top: 10px;
   color: var(--ink-soft);
-  font-size: 0.92rem;
-  font-style: italic;
+  line-height: 1.6;
+}
+
+.about__role-perfil strong {
+  color: var(--ink);
+}
+
+.about__role-resp-label {
+  margin-top: 16px;
+  color: var(--ink);
 }
 
 .about__role .about__list {
-  font-size: 0.92rem;
+  margin-top: 8px;
 }
 
 .about__stats {
-  margin: 72px 0 0;
-  padding-top: 40px;
+  margin: 0;
+  padding-top: 48px;
   border-top: 1px solid var(--celeste-soft);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));

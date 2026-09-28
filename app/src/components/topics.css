@@ -1,6 +1,7 @@
 .topics {
   background: var(--cream);
-  padding: 88px 0 120px;
+  min-height: var(--section-min-height);
+  padding: 96px 0 120px;
 }
 
 .topics__head {
