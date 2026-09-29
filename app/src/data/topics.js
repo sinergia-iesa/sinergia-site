@@ -77,7 +77,7 @@ export const topics = [
         slug: 'introduccion-colab',
         title: 'Introducción a Colab',
         description:
-          'Lo básico para empezar a usar Google Colab desde.',
+          'Lo básico para empezar a usar Google Colab desde 0.',
         link: 'https://sinergia-iesa.github.io/Introduccion-a-Colab/',
         subtopics: [],
       },
