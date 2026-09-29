@@ -73,6 +73,14 @@ export const topics = [
         link: 'https://sinergia-iesa.github.io/Introduccion-a-Python/',
         subtopics: [],
       },
+      {
+        slug: 'introduccion-colab',
+        title: 'Introducción a Colab',
+        description:
+          'Lo básico para empezar a usar Google Colab desde.',
+        link: 'https://sinergia-iesa.github.io/Introduccion-a-Colab/',
+        subtopics: [],
+      },
     ],
   },
 ]
