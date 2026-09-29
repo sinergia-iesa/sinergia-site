@@ -30,18 +30,25 @@ function matches(item, query) {
 
 export default function ResearchSection() {
   const [query, setQuery] = useState('')
-  const [field, setField] = useState('todas')
+  // Campos seleccionados (vacío = sin filtro, se muestran todas)
+  const [selected, setSelected] = useState([])
 
   const trimmed = query.trim().toLowerCase()
 
+  const toggleField = (slug) =>
+    setSelected((prev) =>
+      prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug],
+    )
+
+  // Una investigación se muestra si tiene al menos uno de los campos elegidos
   const results = useMemo(
     () =>
       sorted.filter(
         (item) =>
-          (field === 'todas' || item.fields?.includes(field)) &&
+          (selected.length === 0 || selected.some((slug) => item.fields?.includes(slug))) &&
           (!trimmed || matches(item, trimmed)),
       ),
-    [field, trimmed],
+    [selected, trimmed],
   )
 
   return (
@@ -68,9 +75,9 @@ export default function ResearchSection() {
           <div className="research__filters" role="group" aria-label="Filtrar por campo">
             <button
               type="button"
-              className={`research__chip${field === 'todas' ? ' is-active' : ''}`}
-              aria-pressed={field === 'todas'}
-              onClick={() => setField('todas')}
+              className={`research__chip${selected.length === 0 ? ' is-active' : ''}`}
+              aria-pressed={selected.length === 0}
+              onClick={() => setSelected([])}
             >
               Todas <span>{research.length}</span>
             </button>
@@ -78,9 +85,9 @@ export default function ResearchSection() {
               <button
                 key={f.slug}
                 type="button"
-                className={`research__chip${field === f.slug ? ' is-active' : ''}`}
-                aria-pressed={field === f.slug}
-                onClick={() => setField(f.slug)}
+                className={`research__chip${selected.includes(f.slug) ? ' is-active' : ''}`}
+                aria-pressed={selected.includes(f.slug)}
+                onClick={() => toggleField(f.slug)}
               >
                 {f.label} <span>{f.count}</span>
               </button>
@@ -138,7 +145,7 @@ export default function ResearchSection() {
           <p className="research__empty">
             {research.length === 0
               ? 'Pronto publicaremos nuestras investigaciones.'
-              : 'No hay investigaciones que coincidan con la búsqueda o el campo seleccionado.'}
+              : 'No hay investigaciones que coincidan con la búsqueda o los campos seleccionados.'}
           </p>
         )}
       </div>
