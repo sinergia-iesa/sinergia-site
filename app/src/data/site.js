@@ -66,7 +66,7 @@ export const about = {
   ],
 
   stats: [
-    { value: '2', label: 'guías publicadas' },
+    { value: '3', label: 'guías publicadas' },
     { value: '100%', label: 'accesible desde el navegador' },
     { value: '0', label: 'instalaciones necesarias para verlas' },
   ],
