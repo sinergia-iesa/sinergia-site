@@ -16,7 +16,7 @@ cualquier repo de proyecto que no se llame exactamente `sinergia-iesa.github.io`
 
 ```
 sinergia-site/
-└── app/                      → portal React (hero, quiénes somos, investigaciones, guías iniciales)
+└── app/                      → portal React (hero, quiénes somos, investigaciones, guías)
     ├── public/
     │   ├── hero.png          → fondo del hero (reemplázalo a tu gusto)
     │   └── thumbnails/       → miniaturas, organizadas igual que la jerarquía
@@ -30,7 +30,7 @@ sinergia-site/
             ├── Hero.jsx
             ├── AboutUs.jsx
             ├── ResearchSection.jsx → investigaciones con filtro por campo y búsqueda
-            ├── TopicsSection.jsx → busca y renderiza el árbol de guías iniciales
+            ├── TopicsSection.jsx → busca y renderiza el árbol de guías
             └── TopicNode.jsx     → un solo componente recursivo para tema/subtema/subtema
 ```
 

@@ -12,7 +12,7 @@ export default function Navbar() {
         </a>
         <div className="navbar__links">
           <a href="#quienes-somos">Quiénes somos</a>
-          <a href="#guias-iniciales">Guías iniciales</a>
+          <a href="#guias">Guías</a>
           <a href="#investigaciones">Investigaciones</a>
         </div>
       </div>

@@ -58,15 +58,6 @@ export default function AboutUs() {
             ))}
           </div>
         </div>
-
-        <dl className="about__stats">
-          {about.stats.map((stat) => (
-            <div className="about__stat" key={stat.label}>
-              <dt>{stat.value}</dt>
-              <dd>{stat.label}</dd>
-            </div>
-          ))}
-        </dl>
       </div>
     </section>
   )

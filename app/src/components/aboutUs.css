@@ -178,25 +178,3 @@
 .about__role .about__list {
   margin-top: 8px;
 }
-
-.about__stats {
-  margin: 0;
-  padding-top: 48px;
-  border-top: 1px solid var(--celeste-soft);
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 32px;
-}
-
-.about__stat dt {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 2.4rem;
-  color: var(--celeste);
-}
-
-.about__stat dd {
-  margin: 6px 0 0;
-  color: var(--ink-soft);
-  font-size: 0.95rem;
-}

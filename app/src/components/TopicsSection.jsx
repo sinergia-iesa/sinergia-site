@@ -43,11 +43,11 @@ export default function TopicsSection() {
   const results = useMemo(() => filterTopics(topics, trimmed), [trimmed])
 
   return (
-    <section id="guias-iniciales" className="topics">
+    <section id="guias" className="topics">
       <div className="wrap">
         <div className="topics__head">
           <div>
-            <h2>Guías iniciales</h2>
+            <h2>Guías</h2>
             <p>Explora el material de las guías organizado por tema y subtema.</p>
           </div>
 

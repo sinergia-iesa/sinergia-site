@@ -83,4 +83,20 @@ export const topics = [
       },
     ],
   },
+  {
+    slug: 'guias-avanzadas',
+    title: 'Guías Avanzadas',
+    description:
+      'Material para profundizar una vez dominadas las guías de introducción.',
+    subtopics: [
+      {
+        slug: 'introduccion-redes-neuronales',
+        title: 'Introducción a la creación de redes neuronales',
+        description:
+          'Qué es una red neuronal artificial y cómo construir, entrenar y desplegar una con Keras, con cuadernos de Colab y sus datos.',
+        link: 'https://sinergia-iesa.github.io/introduccion-a-la-creacion-de-redes-neuronales/',
+        subtopics: [],
+      },
+    ],
+  },
 ]
